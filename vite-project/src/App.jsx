@@ -1,6 +1,6 @@
 import { Navbar } from './Componente/Navbar/navbar';
-import PlaneAirbbStandar from './Componente/Planes/PlaneAirbbStandar';
-import PlaneAirbbpremuim from './Componente/Planes/PlaneAirbbpremuim';
+import PlaneAirbbStandar from './Componente/PlanesAirbb/PlaneAirbbStandar';
+import PlaneAirbbpremuim from './Componente/PlanesAirbb/PlaneAirbbpremuim';
 import Nosotros from './Componente/SobreNosotros/Nosotos';
 import Header from './Componente/heder/heder';
 

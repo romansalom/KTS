@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const PlaneAirbbpremuim = () => {
   useEffect(() => {
     AOS.init({
-      once: false, // Animación solo una vez al desplazar
+      once: true, // Animación solo una vez al desplazar
       offset: 100, // Desplazamiento en píxeles antes de que se active la animación
       duration: 1000, // Duración de la animación en milisegundos
     });

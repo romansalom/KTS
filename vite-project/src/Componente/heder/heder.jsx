@@ -3,7 +3,7 @@ import '../../App.css';
 
 function Header() {
   return (
-    <div className="playfair-display-letras bg-[#262626] text-[#d3d3cb]">
+    <div className="playfair-display-letras bg-[#262626] ">
       <br />
       <br />
 
@@ -17,11 +17,19 @@ function Header() {
         </div>
 
         <div className="max-w-lg mx-auto text-center">
-          <h3 className="text-3xl md:text-4xl leading-10 mt-6" data-aos="typed">
+          <h3
+            className="text-3xl md:text-4xl leading-10 mt-6 text-[#d3d3cb]"
+            data-aos="typed"
+          >
             Transformamos tu espacio vacío en un departamento, moderno, estético
             y funcional.
           </h3>
-          <p className="text-lg mt-4 mb-10">KTS, Soluciones para compradores</p>
+          <p className="text-lg mt-4 mb-10  text-[#d3d3cb]">
+            <span className="text-red-500">K</span>
+            <span className="text-yellow-500">T</span>
+            <span className="text-blue-500">S</span>, Soluciones para
+            compradores
+          </p>
         </div>
       </div>
       <br />
