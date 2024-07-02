@@ -1,5 +1,5 @@
 import { Navbar } from './Componente/Navbar/navbar';
-import Planes from './Componente/Planes/Planes';
+import PlaneAirbbStandar from './Componente/Planes/Planes';
 import Nosotros from './Componente/SobreNosotros/Nosotos';
 import Header from './Componente/heder/heder';
 
@@ -9,7 +9,7 @@ function App() {
       <Navbar></Navbar>
       <Header></Header>
       <Nosotros></Nosotros>
-      <Planes></Planes>
+      <PlaneAirbbStandar></PlaneAirbbStandar>
     </>
   );
 }

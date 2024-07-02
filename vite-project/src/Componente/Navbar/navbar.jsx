@@ -13,11 +13,11 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="border-b w-full md:static md:text-sm md:border-none">
+    <nav className="playfair-display-letras border-b bg-[#d3d3cb] w-full md:static md:text-base md:border-none">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-1 md:py-2 md:block">
           <a href="javascript:void(0)">
-            <img src="logokts.png" width={70} height={50} alt="Float UI logo" />
+            <img src="logokts.png" width={90} height={50} alt="Float UI logo" />
           </a>
           <div className="md:hidden">
             <button
@@ -64,7 +64,9 @@ export const Navbar = () => {
           <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, idx) => {
               return (
-                <li key={idx} className="text-gray-700 hover:text-indigo-600">
+                <li key={idx} className="text-[#262626] text-lg">
+                  {' '}
+                  {/* Ajuste aquí el tamaño del texto */}
                   <a href={item.path} className="block">
                     {item.title}
                   </a>

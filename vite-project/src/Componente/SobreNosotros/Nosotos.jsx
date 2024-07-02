@@ -6,7 +6,7 @@ function Nosotros() {
   useEffect(() => {
     AOS.init({
       once: false, // Animación solo una vez al desplazar
-      offset: 100, // Desplazamiento en píxeles antes de que se active la animación
+      offset: 10, // Desplazamiento en píxeles antes de que se active la animación
       duration: 1000, // Duración de la animación en milisegundos
     });
   }, []);

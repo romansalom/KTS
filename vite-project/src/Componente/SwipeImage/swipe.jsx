@@ -6,7 +6,7 @@ import {
 
 function ImageComparisonSlider() {
   return (
-    <div className="image-comparison-container">
+    <div className="image-comparison-container ">
       <ReactCompareSlider
         itemOne={
           <ReactCompareSliderImage
