@@ -1,5 +1,6 @@
 import { Navbar } from './Componente/Navbar/navbar';
-import PlaneAirbbStandar from './Componente/Planes/Planes';
+import PlaneAirbbStandar from './Componente/Planes/PlaneAirbbStandar';
+import PlaneAirbbpremuim from './Componente/Planes/PlaneAirbbpremuim';
 import Nosotros from './Componente/SobreNosotros/Nosotos';
 import Header from './Componente/heder/heder';
 
@@ -10,6 +11,7 @@ function App() {
       <Header></Header>
       <Nosotros></Nosotros>
       <PlaneAirbbStandar></PlaneAirbbStandar>
+      <PlaneAirbbpremuim></PlaneAirbbpremuim>
     </>
   );
 }

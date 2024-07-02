@@ -1,5 +1,15 @@
 import './styles.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const PlaneAirbbStandar = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true, // Animación solo una vez al desplazar
+      offset: 100, // Desplazamiento en píxeles antes de que se active la animación
+      duration: 1000, // Duración de la animación en milisegundos
+    });
+  }, []);
   return (
     <div className="contenedore-zoomes bg-[#262626]">
       {' '}
@@ -8,12 +18,15 @@ const PlaneAirbbStandar = () => {
 
         <div className="container px-5 py-20 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+            <div
+              data-aos="fade-right"
+              className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 "
+            >
               <h2 className="playfair-display-letras text-sm title-font text-white tracking-widest">
-                Linea{' '}
+                Linea Airbnb{' '}
               </h2>
               <h1 className="playfair-display-letras text-white text-3xl title-font font-medium mb-4">
-                Airbnb Standard{' '}
+                Standard{' '}
               </h1>
 
               <p className="playfair-display-letras leading-relaxed mb-4">
@@ -109,7 +122,7 @@ const PlaneAirbbStandar = () => {
                   </svg>
                 </div>
                 <span className="ml-autotext-white">
-                  <span className="text-[#262626]"></span>FLEXIBLE
+                  <span className="text-[#262626]"></span>INTEGRAL
                 </span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
@@ -215,6 +228,7 @@ const PlaneAirbbStandar = () => {
               </div>
             </div>
             <img
+              data-aos="fade-up"
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
               src="https://dummyimage.com/400x400"

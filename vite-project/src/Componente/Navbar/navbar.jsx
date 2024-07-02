@@ -13,8 +13,8 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="playfair-display-letras border-b bg-[#d3d3cb] w-full md:static md:text-base md:border-none">
-      <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
+    <nav className="playfair-display-letras  bg-[#262626] w-full md:static md:text-base md:border-none">
+      <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8 ">
         <div className="flex items-center justify-between py-1 md:py-2 md:block">
           <a href="javascript:void(0)">
             <img src="logokts.png" width={90} height={50} alt="Float UI logo" />
@@ -29,10 +29,10 @@ export const Navbar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
                   viewBox="0 0 20 20"
-                  fill="currentColor"
+                  fill="white"
                 >
                   <path
-                    fillRule="evenodd"
+                    fillRule="white"
                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                     clipRule="evenodd"
                   />
@@ -40,10 +40,10 @@ export const Navbar = () => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
+                  fill="white"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="currentColor"
+                  stroke="white"
                   className="w-6 h-6"
                 >
                   <path
@@ -64,7 +64,7 @@ export const Navbar = () => {
           <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
             {navigation.map((item, idx) => {
               return (
-                <li key={idx} className="text-[#262626] text-lg">
+                <li key={idx} className="text-white text-lg">
                   {' '}
                   {/* Ajuste aquí el tamaño del texto */}
                   <a href={item.path} className="block">
