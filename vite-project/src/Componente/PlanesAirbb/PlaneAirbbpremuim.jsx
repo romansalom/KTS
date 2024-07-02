@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const PlaneAirbbpremuim = () => {
   useEffect(() => {
     AOS.init({
-      once: true, // Animación solo una vez al desplazar
+      once: false, // Animación solo una vez al desplazar
       offset: 100, // Desplazamiento en píxeles antes de que se active la animación
       duration: 1000, // Duración de la animación en milisegundos
     });
@@ -16,7 +16,7 @@ const PlaneAirbbpremuim = () => {
       <section className="text-white body-font overflow-hidden  bg-[#262626]">
         <div className="relative z-10"></div>
 
-        <div className="container px-5 py-10 mx-auto" data-aos="fade-right">
+        <div className="container px-5  mx-auto" data-aos="fade-right">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
               <h2 className="playfair-display-letras text-sm title-font text-white tracking-widest">
