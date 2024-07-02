@@ -1,0 +1,18 @@
+.typing-effect>span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1s steps(10, end) forwards;
+    margin-right: 5px;
+    /* Espacio entre palabras */
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
