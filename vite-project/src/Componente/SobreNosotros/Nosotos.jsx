@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 function Nosotros() {
   useEffect(() => {
     AOS.init({
-      once: true, // Animación solo una vez al desplazar
+      once: false, // Animación solo una vez al desplazar
       offset: 10, // Desplazamiento en píxeles antes de que se active la animación
       duration: 1000, // Duración de la animación en milisegundos
     });

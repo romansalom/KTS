@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 const PlaneAirbbpremuim = () => {
   useEffect(() => {
     AOS.init({
-      once: true, // Animación solo una vez al desplazar
+      once: false, // Animación solo una vez al desplazar
       offset: 100, // Desplazamiento en píxeles antes de que se active la animación
       duration: 1000, // Duración de la animación en milisegundos
     });
@@ -16,12 +16,9 @@ const PlaneAirbbpremuim = () => {
       <section className="text-white body-font overflow-hidden  bg-[#262626]">
         <div className="relative z-10"></div>
 
-        <div className="container px-5 py-10 mx-auto">
+        <div className="container px-5 py-10 mx-auto" data-aos="fade-right">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <div
-              data-aos="fade-right"
-              className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 "
-            >
+            <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
               <h2 className="playfair-display-letras text-sm title-font text-white tracking-widest">
                 Linea Airbnb{' '}
               </h2>
@@ -233,13 +230,12 @@ const PlaneAirbbpremuim = () => {
                 </span>
               </div>
               <div className="playfair-display-letras flex">
-                <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                <button className="flex ml-auto text-white bg-yellow-400 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-300 rounded text-black">
                   Estoy interesado !
                 </button>
               </div>
             </div>
             <img
-              data-aos="fade-up"
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
               src="https://dummyimage.com/400x400"
