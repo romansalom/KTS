@@ -1,0 +1,27 @@
+/* ImageComparisonSlider.css */
+.image-comparison-container {
+    width: 100%;
+    margin: 0 auto;
+    /* Centrar el componente */
+}
+
+@media (min-width: 1024px) {
+    .image-comparison-container {
+        max-width: 80%;
+        /* Reduce el tamaño al 70% solo en pantallas grandes */
+    }
+}
+
+.react-compare-slider-container {
+    border-radius: 15px;
+    /* Bordes redondos */
+    overflow: hidden;
+    /* Oculta el contenido que sobresale del contenedor */
+    box-shadow: 0 5px 15px rgba(158, 4, 4, 0.3);
+    /* Sombra 3D */
+}
+
+.react-compare-slider-handle {
+    border-radius: 50%;
+    /* Bordes redondos para el control deslizante */
+}
