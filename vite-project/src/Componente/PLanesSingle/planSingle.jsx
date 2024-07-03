@@ -54,6 +54,7 @@ const PlanSimple = () => {
           </div>
         </div>
       </section>
+      <br></br>
     </div>
   );
 };
