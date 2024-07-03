@@ -13,7 +13,9 @@ const PlaneAirbbStandar = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = 'Estoy interesado en la línea Airbnb Standard';
+    const message =
+      'Hola, estoy interesado en obtener más información sobre la línea Airbnb Standard. ¿Podrías proporcionarme más detalles sobre los servicios y precios? ¡Gracias!';
+
     const phoneNumber = '+5491160254313'; // Reemplaza esto con el número de teléfono
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message

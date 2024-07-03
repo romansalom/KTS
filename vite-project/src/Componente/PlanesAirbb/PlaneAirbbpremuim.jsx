@@ -10,6 +10,17 @@ const PlaneAirbbpremuim = () => {
       duration: 1000, // Duración de la animación en milisegundos
     });
   }, []);
+  const handleWhatsAppClick = () => {
+    const message =
+      'Hola, estoy interesado en obtener más información sobre la línea Airbnb Premuim. ¿Podrías proporcionarme más detalles sobre los servicios y precios? ¡Gracias!';
+
+    const phoneNumber = '+5491160254313'; // Reemplaza esto con el número de teléfono
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="contenedore-zoomes bg-[#262626]">
       {' '}
@@ -241,7 +252,10 @@ const PlaneAirbbpremuim = () => {
                   </a>
                 </button>
 
-                <button className="rounded-full w-10 h-10 bg-green-400 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                <button
+                  onClick={handleWhatsAppClick}
+                  className="rounded-full w-10 h-10 bg-green-400 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
+                >
                   <svg
                     className="w-6 h-6 dark:text-white"
                     aria-hidden="true"
