@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const PlaneAirbbpremuim = () => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
@@ -267,10 +266,11 @@ const PlaneAirbbpremuim = () => {
                 </span>
               </div>
               <div className="playfair-display-letras flex">
-                <button className="flex ml-auto text-black bg-[#d3d3cb] border-0 py-2 px-2 focus:outline-none  rounded text-black">
+                <button className="flex ml-auto items-center text-black bg-gray-300 hover:bg-gray-400 border-0 py-2 px-4 focus:outline-none rounded-lg text-sm">
                   <a
                     href="CATALOGO PREMIUM (1).pdf"
                     download="CatalogoLineaAirbnbPremuim.pdf"
+                    className="text-black hover:text-gray-800"
                   >
                     Descargar Brochure
                   </a>

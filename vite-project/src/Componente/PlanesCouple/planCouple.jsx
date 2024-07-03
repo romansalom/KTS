@@ -50,14 +50,16 @@ const PlaneCouple = () => {
                 natural.
               </p>
               <div className="playfair-display-letras flex">
-                <button className="flex ml-auto text-white bg-[#262626] border-0 py-2 px-2 focus:outline-none  rounded text-black">
+                <button className="flex ml-auto items-center text-white bg-gray-900 hover:bg-gray-800 border-0 py-2 px-4 focus:outline-none rounded-lg text-sm">
                   <a
                     href="catalogo couple.pdf"
                     download="CatalogoLineaCouple.pdf"
+                    className="text-white hover:text-gray-300"
                   >
                     Descargar Brochure
                   </a>
                 </button>
+
                 <button
                   onClick={handleWhatsAppClick}
                   className="rounded-full w-10 h-10 bg-green-400 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
