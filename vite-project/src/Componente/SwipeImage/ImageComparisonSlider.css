@@ -1,9 +1,16 @@
-/* ImageComparisonSlider.css */
 .image-comparison-container {
-    width: 100%;
-    margin: 0 auto;
-    /* Centrar el componente */
+    border-radius: 15px;
+    overflow: hidden;
 }
+
+.react-compare-slider {
+    border-radius: 15px;
+}
+
+.react-compare-slider-image {
+    border-radius: 15px;
+}
+
 
 @media (min-width: 1024px) {
     .image-comparison-container {

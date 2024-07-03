@@ -17,10 +17,7 @@ function Header() {
         </div>
 
         <div className="max-w-lg mx-auto text-center">
-          <h3
-            className="text-3xl md:text-4xl leading-10 mt-6 text-[#d3d3cb]"
-            data-aos="typed"
-          >
+          <h3 className="text-3xl md:text-4xl leading-10 mt-6 text-[#d3d3cb]">
             Transformamos tu espacio vacío en un departamento, moderno, estético
             y funcional.
           </h3>
