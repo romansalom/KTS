@@ -4,20 +4,36 @@ import '../../App.css';
 export const Navbar = () => {
   const [state, setState] = useState(false);
 
-  // Replace javascript:void(0) paths with your paths
   const navigation = [
-    { title: 'Features', path: 'javascript:void(0)' },
-    { title: 'Integrations', path: 'javascript:void(0)' },
-    { title: 'Customers', path: 'javascript:void(0)' },
-    { title: 'Pricing', path: 'javascript:void(0)' },
+    {
+      title: 'Features',
+      path: 'javascript:void(0)',
+      hoverClass: 'hover:border-red-500',
+    },
+    {
+      title: 'Integrations',
+      path: 'javascript:void(0)',
+      hoverClass: 'hover:border-yellow-500',
+    },
+    {
+      title: 'Customers',
+      path: 'javascript:void(0)',
+      hoverClass: 'hover:border-blue-500',
+    },
   ];
 
   return (
-    <nav className="playfair-display-letras  bg-[#262626] w-full md:static md:text-base md:border-none">
-      <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8 ">
+    <nav className="playfair-display-letras bg-[#262626] w-full md:static md:text-base md:border-none">
+      <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-1 md:py-2 md:block">
-          <a href="javascript:void(0)">
-            <img src="logokts.png" width={90} height={50} alt="Float UI logo" />
+          <a href="javascript:void(0)" className="mx-auto md:mx-0">
+            <img
+              src="logokts.png"
+              width={90}
+              height={50}
+              alt="Float UI logo"
+              className="mx-auto md:mx-0"
+            />
           </a>
           <div className="md:hidden">
             <button
@@ -32,7 +48,7 @@ export const Navbar = () => {
                   fill="white"
                 >
                   <path
-                    fillRule="white"
+                    fillRule="evenodd"
                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                     clipRule="evenodd"
                   />
@@ -61,19 +77,20 @@ export const Navbar = () => {
             state ? 'block' : 'hidden'
           }`}
         >
-          <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-            {navigation.map((item, idx) => {
-              return (
-                <li key={idx} className="text-white text-lg">
-                  {' '}
-                  {/* Ajuste aquí el tamaño del texto */}
-                  <a href={item.path} className="block">
-                    {item.title}
-                  </a>
-                </li>
-              );
-            })}
-            <span className="hidden w-px h-6 bg-gray-300 md:block"></span>
+          <ul className="space-y-6 md:flex md:space-x-6 md:space-y-0 md:justify-end md:items-center">
+            {navigation.map((item, idx) => (
+              <li
+                key={idx}
+                className="text-white text-lg text-center md:text-left"
+              >
+                <a
+                  href={item.path}
+                  className={`block border-b-2 border-transparent ${item.hoverClass}`}
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

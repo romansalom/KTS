@@ -13,16 +13,16 @@ const PlaneAirbbStandar = () => {
   return (
     <div className="contenedore-zoomes bg-[#262626]">
       {' '}
-      <section className="text-white body-font overflow-hidden">
+      <section className="text-[#d3d3cb] body-font overflow-hidden">
         <div className="relative z-10"></div>
 
         <div className="container px-5 py-20 mx-auto" data-aos="fade-right">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
-              <h2 className="playfair-display-letras text-sm title-font text-white tracking-widest">
+              <h2 className="playfair-display-letras text-sm title-font text-[#d3d3cb] tracking-widest">
                 Standard{' '}
               </h2>
-              <h1 className="playfair-display-letras text-white text-3xl title-font font-medium mb-4">
+              <h1 className="playfair-display-letras text-[#d3d3cb] text-3xl title-font font-medium mb-4">
                 Linea Airbnb{' '}
               </h1>
 
@@ -31,9 +31,9 @@ const PlaneAirbbStandar = () => {
                 destaque en las plataformas de alquiler temporario
               </p>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
-                    className="w-45 h-5 text-gray-800 dark:text-white"
+                    className="w-45 h-5 text-gray-800 dark:text-[#d3d3cb]"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -48,14 +48,14 @@ const PlaneAirbbStandar = () => {
                     />
                   </svg>
                 </div>
-                <span className="ml-autotext-white">FUNCIONAL</span>
+                <span className="ml-autotext-[#d3d3cb]">FUNCIONAL</span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
                     fill="white"
                     aria-hidden="true"
-                    className="w-5 h-5 text-gray-800 dark:text-white"
+                    className="w-5 h-5 text-gray-800 dark:text-[#d3d3cb]"
                     viewBox="0 0 32 32"
                     width="24"
                     height="24"
@@ -65,14 +65,14 @@ const PlaneAirbbStandar = () => {
                     <path d="M15.966 1.232c-0.97 0.021-1.901 0.261-2.807 0.655l1.404 2.62c0.463-0.165 0.937-0.277 1.404-0.281 1.599 0 3.292 0.853 4.585 3.088l5.333 9.264 1.778-2.901-4.491-7.86c-1.714-2.964-4.434-4.608-7.205-4.585 0 0 0 0 0 0zM7.171 8.811l-4.117 7.205c-1.569 2.715-1.68 5.792-0.374 8.234 0.541 1.012 1.362 1.842 2.339 2.526l1.497-2.526c-0.502-0.397-0.929-0.867-1.216-1.403-0.781-1.46-0.831-3.41 0.281-5.334l5.053-8.702h-3.462zM27.194 21.536c-0.098 0.48-0.239 0.896-0.468 1.311-0.801 1.448-2.372 2.526-4.866 2.526h-10.199l1.778 2.994h8.421c3.402 0 6.146-1.601 7.486-4.023 0.472-0.855 0.732-1.824 0.842-2.807l-2.994 0zM11.272 12.6l-6.728-3.879 6.728-3.879-0 7.759zM22.219 15.005l6.728 3.879 0-7.759-6.729 3.879zM8.193 26.81l6.728-3.879 0 7.759-6.729-3.879z"></path>
                   </svg>
                 </div>
-                <span className="ml-autotext-white">
+                <span className="ml-autotext-[#d3d3cb]">
                   <span className="text-[#262626]">.</span>UPCYCLE
                 </span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
-                    className="w-4 h-4  dark:text-white"
+                    className="w-4 h-4  dark:text-[#d3d3cb]"
                     fill="white"
                     height="800px"
                     width="800px"
@@ -98,14 +98,14 @@ const PlaneAirbbStandar = () => {
                     </g>
                   </svg>
                 </div>
-                <span className="ml-autotext-white">
+                <span className="ml-autotext-[#d3d3cb]">
                   <span className="text-[#262626]">.</span>FLEXIBLE
                 </span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
-                    className="w-5 h-5  dark:text-white"
+                    className="w-5 h-5  dark:text-[#d3d3cb]"
                     fill="white"
                     viewBox="-18.91 0 122.88 122.88"
                     version="1.1"
@@ -118,14 +118,14 @@ const PlaneAirbbStandar = () => {
                     </g>
                   </svg>
                 </div>
-                <span className="ml-autotext-white">
+                <span className="ml-autotext-[#d3d3cb]">
                   <span className="text-[#262626]"></span>INTEGRAL
                 </span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
-                    className="w-4 h-4  dark:text-white"
+                    className="w-4 h-4  dark:text-[#d3d3cb]"
                     fill="white"
                     height="800px"
                     width="800px"
@@ -159,14 +159,14 @@ const PlaneAirbbStandar = () => {
                     </g>
                   </svg>
                 </div>
-                <span className="ml-autotext-white">
+                <span className="ml-autotext-[#d3d3cb]">
                   <span className="text-[#262626]">.</span>CAMA MATRIMONIAL
                 </span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
-                    className="w-5 h-5  dark:text-white"
+                    className="w-5 h-5  dark:text-[#d3d3cb]"
                     fill="white"
                     width="800px"
                     height="800px"
@@ -177,14 +177,14 @@ const PlaneAirbbStandar = () => {
                     <path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H56V96a8.00066,8.00066,0,0,0-13.65723-5.65723l-32,32a8.00122,8.00122,0,0,0,0,11.31446l32,32A8.00066,8.00066,0,0,0,56,160V136H96a8,8,0,0,0,0-16Zm149.65723,2.34277-32-32A8.00066,8.00066,0,0,0,200,96v24H160a8,8,0,0,0,0,16h40v24a8.00053,8.00053,0,0,0,13.65723,5.65723l32-32A8.00122,8.00122,0,0,0,245.65723,122.34277Z" />
                   </svg>
                 </div>
-                <span className="ml-autotext-white">
+                <span className="ml-autotext-[#d3d3cb]">
                   <span className="text-[#262626]">.</span>CAMA INDIVIDUAL
                 </span>
               </div>
               <div className="playfair-display-letras flex border-t border-gray-200 py-2">
-                <div className="text-white">
+                <div className="text-[#d3d3cb]">
                   <svg
-                    className="w-4 h-4  dark:text-white"
+                    className="w-4 h-4  dark:text-[#d3d3cb]"
                     fill="white"
                     version="1.1"
                     id="Capa_1"
@@ -214,13 +214,36 @@ const PlaneAirbbStandar = () => {
                     </g>
                   </svg>
                 </div>
-                <span className="ml-autotext-white">
+                <span className="ml-autotext-[#d3d3cb]">
                   <span className="text-[#262626]">.</span>MONTAJE SENCILLO
                 </span>
               </div>
               <div className="playfair-display-letras flex">
-                <button className="flex ml-auto text-black bg-[#d3d3cb] border-0 py-2 px-6 focus:outline-none  rounded text-black">
-                  Estoy interesado
+                <button className="flex  ml-auto text-black bg-[#d3d3cb] border-0 py-2 px-2 focus:outline-none  rounded text-black">
+                  Descargar Brochure
+                </button>
+
+                <button className="rounded-full w-10 h-10 bg-green-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg
+                    className="w-6 h-6 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="black"
+                      fillRule="evenodd"
+                      d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                      clipRule="evenodd"
+                    />
+                    <path
+                      fill="black"
+                      d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
