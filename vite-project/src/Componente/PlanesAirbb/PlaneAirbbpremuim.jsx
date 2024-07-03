@@ -2,7 +2,30 @@ import './styles.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const PlaneAirbbpremuim = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+
+  const images = [
+    './ImagenesLineaPremuim/Image1copia.png',
+    './ImagenesLineaPremuim/Image2.png',
+    './ImagenesLineaPremuim/Image6.png',
+    './ImagenesLineaPremuim/Image4.png',
+    './ImagenesLineaPremuim/Image11.png',
+    // Agrega más rutas de imágenes según sea necesario
+  ];
+
   useEffect(() => {
     AOS.init({
       once: false, // Animación solo una vez al desplazar
@@ -10,6 +33,7 @@ const PlaneAirbbpremuim = () => {
       duration: 1000, // Duración de la animación en milisegundos
     });
   }, []);
+
   const handleWhatsAppClick = () => {
     const message =
       'Hola, estoy interesado en obtener más información sobre la línea Airbnb Premuim. ¿Podrías proporcionarme más detalles sobre los servicios y precios? ¡Gracias!';
@@ -279,11 +303,23 @@ const PlaneAirbbpremuim = () => {
                 </button>
               </div>
             </div>
-            <img
-              alt="ecommerce"
-              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
-            />
+            <div className="lg:w-1/2 w-full lg:h-auto h-auto">
+              <Slider {...settings}>
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-center items-center h-60 lg:h-auto"
+                  >
+                    <img
+                      alt={`slide-${index}`}
+                      src={image}
+                      className=" object-cover object-center rounded w-full h-full"
+                      style={{ maxHeight: '100%', maxWidth: '100%' }}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </section>
