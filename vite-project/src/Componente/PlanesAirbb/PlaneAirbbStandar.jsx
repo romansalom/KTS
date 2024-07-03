@@ -223,7 +223,7 @@ const PlaneAirbbStandar = () => {
                   Descargar Brochure
                 </button>
 
-                <button className="rounded-full w-10 h-10 bg-green-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                <button className="rounded-full w-10 h-10 bg-green-400 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     className="w-6 h-6 dark:text-white"
                     aria-hidden="true"
