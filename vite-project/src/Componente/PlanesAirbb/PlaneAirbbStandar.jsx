@@ -20,10 +20,10 @@ const PlaneAirbbStandar = () => {
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
               <h2 className="playfair-display-letras text-sm title-font text-white tracking-widest">
-                Linea Airbnb{' '}
+                Standard{' '}
               </h2>
               <h1 className="playfair-display-letras text-white text-3xl title-font font-medium mb-4">
-                Standard{' '}
+                Linea Airbnb{' '}
               </h1>
 
               <p className="playfair-display-letras leading-relaxed mb-4">
@@ -219,8 +219,8 @@ const PlaneAirbbStandar = () => {
                 </span>
               </div>
               <div className="playfair-display-letras flex">
-                <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                  Estoy interesado !
+                <button className="flex ml-auto text-black bg-[#d3d3cb] border-0 py-2 px-6 focus:outline-none  rounded text-black">
+                  Estoy interesado
                 </button>
               </div>
             </div>
