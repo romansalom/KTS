@@ -2,6 +2,9 @@ import './styles.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const PlaneAirbbStandar = () => {
   useEffect(() => {
@@ -11,6 +14,24 @@ const PlaneAirbbStandar = () => {
       duration: 1000, // Duración de la animación en milisegundos
     });
   }, []);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+  };
+
+  const images = [
+    './imagenesAirbbStandar/Captura de pantalla (153).png',
+    './imagenesAirbbStandar/sillonkrea2.png',
+    './imagenesAirbbStandar/sillonkrea.png',
+    './imagenesAirbbStandar/5 (1) (1).jpg',
+    './imagenesAirbbStandar/exterior.jpg',
+    // Agrega más rutas de imágenes según sea necesario
+  ];
 
   const handleWhatsAppClick = () => {
     const message =
@@ -268,11 +289,23 @@ const PlaneAirbbStandar = () => {
                 </button>
               </div>
             </div>
-            <img
-              alt="ecommerce"
-              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
-            />
+            <div className="lg:w-1/2 w-full lg:h-auto h-auto">
+              <Slider {...settings}>
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-center items-center h-60 lg:h-auto"
+                  >
+                    <img
+                      alt={`slide-${index}`}
+                      src={image}
+                      className=" object-cover object-center rounded w-full h-full"
+                      style={{ maxHeight: '100%', maxWidth: '100%' }}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </section>
