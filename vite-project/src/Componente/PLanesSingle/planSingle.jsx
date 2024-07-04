@@ -15,8 +15,8 @@ const PlanSimple = () => {
   const images = [
     './imagenesSOLO/11.jpg',
     './imagenesSOLO/3.jpg',
-    './imagenesSOLO/2(1).png',
-    './imagenesSOLO/4(1).jpg',
+    './imagenesSOLO/2 (1).png',
+    './imagenesSOLO/4 (1).jpg',
     './imagenesSOLO/Image7.png',
     './imagenesSOLO/Image9.png',
     './imagenesSOLO/Image7.png',
