@@ -6,17 +6,17 @@ export const Navbar = () => {
 
   const navigation = [
     {
-      title: 'Features',
+      title: 'Nosotros',
       path: 'javascript:void(0)',
       hoverClass: 'hover:border-red-500',
     },
     {
-      title: 'Integrations',
+      title: 'Productos',
       path: 'javascript:void(0)',
       hoverClass: 'hover:border-yellow-500',
     },
     {
-      title: 'Customers',
+      title: 'Contacto',
       path: 'javascript:void(0)',
       hoverClass: 'hover:border-blue-500',
     },
