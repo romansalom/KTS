@@ -15,10 +15,8 @@ const PlaneCouple = () => {
   const images = [
     './imagenesCouple/1 (2).jpg',
     './imagenesCouple/222.png',
-    './imagenesCouple/couple balcon.jpg',
     './imagenesCouple/Image1.png',
     './imagenesCouple/Image4.png',
-    './imagenesCouple/sol y2mas.jpg',
   ];
   const handleWhatsAppClick = () => {
     const message =

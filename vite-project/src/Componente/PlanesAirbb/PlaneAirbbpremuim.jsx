@@ -15,15 +15,9 @@ const PlaneAirbbpremuim = () => {
   };
 
   const images = [
-    './ImagenesLineaPremuim/2.jpg',
-    './ImagenesLineaPremuim/Image1.png',
     './ImagenesLineaPremuim/Image2.png',
-    './ImagenesLineaPremuim/Image4.png',
-    './ImagenesLineaPremuim/Image5.png',
     './ImagenesLineaPremuim/Image6.png',
-    './ImagenesLineaPremuim/Image7.png',
     './ImagenesLineaPremuim/Image11.png',
-    './ImagenesLineaPremuim/rac1k.jpg',
 
     // Agrega más rutas de imágenes según sea necesario
   ];

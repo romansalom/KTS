@@ -15,12 +15,10 @@ const PlaneAirbbStandar = () => {
   };
 
   const images = [
-    './imagenesAirbbStandar/4.jpg',
+    './imagenesAirbbStandar/final entera.png',
     './imagenesAirbbStandar/5 (1) (1).jpg',
     './imagenesAirbbStandar/exterior.jpg',
-    './imagenesAirbbStandar/final entera.png',
     './imagenesAirbbStandar/Image5.png',
-    './imagenesAirbbStandar/Image11.png',
     // Agrega más rutas de imágenes según sea necesario
   ];
 
