@@ -1,35 +1,26 @@
 import './styles.css';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const PlaneAirbbStandar = () => {
-  useEffect(() => {
-    AOS.init({
-      once: false, // Animación solo una vez al desplazar
-      offset: 100, // Desplazamiento en píxeles antes de que se active la animación
-      duration: 1000, // Duración de la animación en milisegundos
-    });
-  }, []);
   const settings = {
-    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 9000,
+    arrows: false,
   };
 
   const images = [
-    './imagenesAirbbStandar/Captura de pantalla (153).png',
-    './imagenesAirbbStandar/sillonkrea2.png',
-    './imagenesAirbbStandar/sillonkrea.png',
+    './imagenesAirbbStandar/4.jpg',
     './imagenesAirbbStandar/5 (1) (1).jpg',
     './imagenesAirbbStandar/exterior.jpg',
+    './imagenesAirbbStandar/final entera.png',
+    './imagenesAirbbStandar/Image5.png',
+    './imagenesAirbbStandar/Image11.png',
     // Agrega más rutas de imágenes según sea necesario
   ];
 
@@ -50,7 +41,7 @@ const PlaneAirbbStandar = () => {
       <section className="text-[#d3d3cb] body-font overflow-hidden">
         <div className="relative z-10"></div>
 
-        <div className="container px-5 py-20 mx-auto" data-aos="fade-right">
+        <div className="container px-5 py-20 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
               <h2 className="playfair-display-letras text-sm title-font text-[#d3d3cb] tracking-widest">
@@ -290,18 +281,17 @@ const PlaneAirbbStandar = () => {
                 </button>
               </div>
             </div>
-            <div className="lg:w-1/2 w-full lg:h-auto h-auto">
+            <div className="lg:w-1/2 w-full lg:h-auto h-auto lg:py-20">
               <Slider {...settings}>
                 {images.map((image, index) => (
                   <div
                     key={index}
-                    className="flex justify-center items-center h-60 lg:h-auto"
+                    className="flex justify-center items-center h-60 lg:h-96"
                   >
                     <img
                       alt={`slide-${index}`}
                       src={image}
-                      className=" object-cover object-center rounded w-full h-full"
-                      style={{ maxHeight: '100%', maxWidth: '100%' }}
+                      className="object-cover object-center rounded w-full h-full"
                     />
                   </div>
                 ))}

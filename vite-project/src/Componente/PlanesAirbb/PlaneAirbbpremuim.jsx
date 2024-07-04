@@ -1,7 +1,4 @@
 import './styles.css';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -12,26 +9,24 @@ const PlaneAirbbpremuim = () => {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 9000,
+    arrows: false,
   };
 
   const images = [
-    './ImagenesLineaPremuim/Image1copia.png',
+    './ImagenesLineaPremuim/2.jpg',
+    './ImagenesLineaPremuim/Image1.png',
     './ImagenesLineaPremuim/Image2.png',
-    './ImagenesLineaPremuim/Image6.png',
     './ImagenesLineaPremuim/Image4.png',
+    './ImagenesLineaPremuim/Image5.png',
+    './ImagenesLineaPremuim/Image6.png',
+    './ImagenesLineaPremuim/Image7.png',
     './ImagenesLineaPremuim/Image11.png',
+    './ImagenesLineaPremuim/rac1k.jpg',
+
     // Agrega más rutas de imágenes según sea necesario
   ];
-
-  useEffect(() => {
-    AOS.init({
-      once: false, // Animación solo una vez al desplazar
-      offset: 100, // Desplazamiento en píxeles antes de que se active la animación
-      duration: 1000, // Duración de la animación en milisegundos
-    });
-  }, []);
 
   const handleWhatsAppClick = () => {
     const message =
@@ -50,7 +45,7 @@ const PlaneAirbbpremuim = () => {
       <section className="text-[#d3d3cb] body-font overflow-hidden  bg-[#262626]">
         <div className="relative z-10"></div>
 
-        <div className="container px-5  mx-auto" data-aos="fade-right">
+        <div className="container px-5  mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
               <h2 className="playfair-display-letras text-sm title-font text-[#d3d3cb] tracking-widest">
@@ -303,18 +298,17 @@ const PlaneAirbbpremuim = () => {
                 </button>
               </div>
             </div>
-            <div className="lg:w-1/2 w-full lg:h-auto h-auto">
+            <div className="lg:w-1/2 w-full lg:h-auto h-auto lg:py-20">
               <Slider {...settings}>
                 {images.map((image, index) => (
                   <div
                     key={index}
-                    className="flex justify-center items-center h-60 lg:h-auto"
+                    className="flex justify-center items-center h-60 lg:h-96"
                   >
                     <img
                       alt={`slide-${index}`}
                       src={image}
-                      className=" object-cover object-center rounded w-full h-full"
-                      style={{ maxHeight: '100%', maxWidth: '100%' }}
+                      className="object-cover object-center rounded w-full h-full"
                     />
                   </div>
                 ))}

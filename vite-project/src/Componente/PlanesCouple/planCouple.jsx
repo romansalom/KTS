@@ -1,14 +1,25 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 const PlaneCouple = () => {
-  useEffect(() => {
-    AOS.init({
-      once: false, // Animación solo una vez al desplazar
-      offset: 100, // Desplazamiento en píxeles antes de que se active la animación
-      duration: 1000, // Duración de la animación en milisegundos
-    });
-  }, []);
+  const settings = {
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 9000,
+    arrows: false,
+  };
+
+  const images = [
+    './imagenesCouple/1 (2).jpg',
+    './imagenesCouple/222.png',
+    './imagenesCouple/couple balcon.jpg',
+    './imagenesCouple/Image1.png',
+    './imagenesCouple/Image4.png',
+    './imagenesCouple/sol y2mas.jpg',
+  ];
   const handleWhatsAppClick = () => {
     const message =
       'Hola, estoy interesado en obtener más información sobre la línea Couple. ¿Podrías proporcionarme más detalles sobre los servicios y precios? ¡Gracias!';
@@ -26,7 +37,7 @@ const PlaneCouple = () => {
       <section className="text-[#262626] body-font overflow-hidden">
         <div className="relative z-10"></div>
 
-        <div className="container px-5 py-20 mx-auto" data-aos="fade-right">
+        <div className="container px-5 py-20 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ">
               <h2 className="playfair-display-letras text-sm title-font text-[#262626] tracking-widest">
@@ -87,11 +98,25 @@ const PlaneCouple = () => {
                 </button>
               </div>
             </div>
-            <img
-              alt="ecommerce"
-              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
-            />
+            <div className="lg:w-1/2 w-full lg:h-auto h-auto lg:py-29">
+              <div className="hidden lg:block">
+                <br />
+              </div>{' '}
+              <Slider {...settings}>
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-center items-center h-60 lg:h-96"
+                  >
+                    <img
+                      alt={`slide-${index}`}
+                      src={image}
+                      className="object-cover object-center rounded w-full h-full"
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </section>

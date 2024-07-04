@@ -29,7 +29,7 @@ export const Navbar = () => {
           <a href="javascript:void(0)" className="mx-auto md:mx-0">
             <img
               src="logokts.png"
-              width={90}
+              width={100}
               height={50}
               alt="Float UI logo"
               className="mx-auto md:mx-0"

@@ -2,44 +2,7 @@
     zoom: 90%;
 }
 
+
 /* customStyles.css */
 
 /* Estilo por defecto para los dots */
-.custom-prev-arrow,
-.custom-next-arrow {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    /* Ajusta el tamaño de las flechas */
-    height: 30px;
-    /* Ajusta el tamaño de las flechas */
-}
-
-.custom-arrow-left,
-.custom-arrow-right {
-    /* Estilos para las flechas (puedes usar una imagen de fondo aquí) */
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-.custom-arrow-left {
-    border-width: 8px 12px 8px 0;
-    border-color: transparent #ffffff transparent transparent;
-    /* Color de la flecha izquierda */
-    margin-left: 4px;
-    /* Ajusta el margen izquierdo de la flecha izquierda */
-}
-
-.custom-arrow-right {
-    border-width: 8px 0 8px 12px;
-    border-color: transparent transparent transparent #ffffff;
-    /* Color de la flecha derecha */
-    margin-right: 4px;
-    /* Ajusta el margen derecho de la flecha derecha */
-}
