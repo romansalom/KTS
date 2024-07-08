@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-
+import './contacto.css';
 const Contacto = () => {
   const [formData, setFormData] = useState({
     from_name: '',
@@ -9,8 +9,11 @@ const Contacto = () => {
     mensaje: '',
   });
 
+  const [enviando, setEnviando] = useState(false); // Estado para el envío del formulario
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setEnviando(true); // Activa el estado de envío
 
     // Configurar emailjs con tu servicio de SMTP
     const serviceID = 'service_nkryj1p'; // Reemplaza con tu ID de servicio
@@ -25,10 +28,12 @@ const Contacto = () => {
           response.text
         );
         // Aquí puedes añadir lógica adicional después de enviar el correo
+        setEnviando(false); // Desactiva el estado de envío
       },
       (error) => {
         console.error('Error al enviar el correo:', error);
         // Manejar errores aquí
+        setEnviando(false); // Desactiva el estado de envío en caso de error
       }
     );
   };
@@ -42,7 +47,7 @@ const Contacto = () => {
   };
 
   return (
-    <div className="playfair-display-letras contenderdso grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#d3d3cb] before:h-full max-md:before:hidden">
+    <div className="contenderdso playfair-display-letras grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#d3d3cb] before:h-full max-md:before:hidden">
       <div>
         <h2 className="playfair-display-letras text-gray-800 text-3xl font-extrabold">
           Realiza tu consulta hoy mismo
@@ -97,26 +102,49 @@ const Contacto = () => {
           <button
             type="submit"
             className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white"
+            disabled={enviando} // Desactiva el botón mientras se envía
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16px"
-              height="16px"
-              fill="#fff"
-              className="mr-2"
-              viewBox="0 0 548.244 548.244"
-            >
-              <path
-                fillRule="evenodd"
-                d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                clipRule="evenodd"
-                data-original="#000000"
-              />
-            </svg>
-            Enviar{' '}
+            {enviando ? (
+              <svg
+                className="animate-spin h-5 w-5 mr-3"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A8.005 8.005 0 014 12H0c0 6.627 5.373 12 12 12v-4c-3.314 0-6.294-1.346-8.485-3.515l1.414-1.414z"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                fill="#fff"
+                className="mr-2"
+                viewBox="0 0 548.244 548.244"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+                  clipRule="evenodd"
+                  data-original="#000000"
+                />
+              </svg>
+            )}
+            {enviando ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
-
         <ul className="mt-4 flex flex-wrap justify-center gap-6">
           <li className="flex items-center text-[#262626]">
             <svg
@@ -140,20 +168,35 @@ const Contacto = () => {
           </li>
           <li className="flex items-center text-[#262626]">
             <svg
+              class="w-6 h-6 text-white dark:text-black"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
+            </svg>
+
+            <span className="text-m ml-4 text-[#262626]">(+54)91160254313</span>
+          </li>
+          <li className="flex items-center text-[#262626]">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
               height="16px"
               fill="currentColor"
-              viewBox="0 0 482.6 482.6"
+              viewBox="0 0 24 24"
             >
               <path
-                d="M98.339 320.8c47.6 56.9 104.9 101.7 170.3 133.4 24.9 11.8 58.2 25.8 95.3 28.2 2.3.1 4.5.2 6.8.2 24.9 0 44.9-8.6 61.2-26.3.1-.1.3-.3.4-.5 5.8-7 12.4-13.3 19.3-20 4.7-4.5 9.5-9.2 14.1-14 21.3-22.2 21.3-50.4-.2-71.9l-60.1-60.1c-10.2-10.6-22.4-16.2-35.2-16.2-12.8 0-25.1 5.6-35.6 16.1l-35.8 35.8c-3.3-1.9-6.7-3.6-9.9-5.2-4-2-7.7-3.9-11-6-32.6-20.7-62.2-47.7-90.5-82.4-14.3-18.1-23.9-33.3-30.6-48.8 9.4-8.5 18.2-17.4 26.7-26.1 3-3.1 6.1-6.2 9.2-9.3 10.8-10.8 16.6-23.3 16.6-36s-5.7-25.2-16.6-36l-29.8-29.8c-3.5-3.5-6.8-6.9-10.2-10.4-6.6-6.8-13.5-13.8-20.3-20.1-10.3-10.1-22.4-15.4-35.2-15.4-12.7 0-24.9 5.3-35.6 15.5l-37.4 37.4c-13.6 13.6-21.3 30.1-22.9 49.2-1.9 23.9 2.5 49.3 13.9 80 17.5 47.5 43.9 91.6 83.1 138.7zm-72.6-216.6c1.2-13.3 6.3-24.4 15.9-34l37.2-37.2c5.8-5.6 12.2-8.5 18.4-8.5 6.1 0 12.3 2.9 18 8.7 6.7 6.2 13 12.7 19.8 19.6 3.4 3.5 6.9 7 10.4 10.6l29.8 29.8c6.2 6.2 9.4 12.5 9.4 18.7s-3.2 12.5-9.4 18.7c-3.1 3.1-6.2 6.3-9.3 9.4-9.3 9.4-18 18.3-27.6 26.8l-.5.5c-8.3 8.3-7 16.2-5 22.2.1.3.2.5.3.8 7.7 18.5 18.4 36.1 35.1 57.1 30 37 61.6 65.7 96.4 87.8 4.3 2.8 8.9 5 13.2 7.2 4 2 7.7 3.9 11 6 .4.2.7.4 1.1.6 3.3 1.7 6.5 2.5 9.7 2.5 8 0 13.2-5.1 14.9-6.8l37.4-37.4c5.8-5.8 12.1-8.9 18.3-8.9 7.6 0 13.8 4.7 17.7 8.9l60.3 60.2c12 12 11.9 25-.3 37.7-4.2 4.5-8.6 8.8-13.3 13.3-7 6.8-14.3 13.8-20.9 21.7-11.5 12.4-25.2 18.2-42.9 18.2-1.7 0-3.5-.1-5.2-.2-32.8-2.1-63.3-14.9-86.2-25.8-62.2-30.1-116.8-72.8-162.1-127-37.3-44.9-62.4-86.7-79-131.5-10.3-27.5-14.2-49.6-12.6-69.7z"
+                d="M12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm-7 10c0-4.963 4.038-9 9-9s9 4.037 9 9-4.038 9-9 9-9-4.037-9-9zm9.5-4.5c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm-6.5 5h2v2h-2v-2zm4 0h2v2h-2v-2z"
                 data-original="#000000"
-              ></path>
+              />
             </svg>
-            <a href="tel:+541160254313" className="text-sm ml-4">
-              <strong>+54 1160254313</strong>
-            </a>
+            <span className="text-sm ml-4 text-[#262626]">
+              Au panamericana 1938
+            </span>
           </li>
         </ul>
       </div>
