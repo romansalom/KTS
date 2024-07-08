@@ -1,45 +1,101 @@
-import './contacto.css';
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contacto = () => {
+  const [formData, setFormData] = useState({
+    from_name: '',
+    user_email: '',
+    user_phone: '',
+    mensaje: '',
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Configurar emailjs con tu servicio de SMTP
+    const serviceID = 'service_nkryj1p'; // Reemplaza con tu ID de servicio
+    const templateID = 'template_vhojq2d'; // Reemplaza con tu ID de plantilla
+    const userID = 'xKpm3cse7rdoAfbV1'; // Reemplaza con tu ID de usuario
+
+    emailjs.send(serviceID, templateID, formData, userID).then(
+      (response) => {
+        console.log(
+          'Correo enviado con éxito!',
+          response.status,
+          response.text
+        );
+        // Aquí puedes añadir lógica adicional después de enviar el correo
+      },
+      (error) => {
+        console.error('Error al enviar el correo:', error);
+        // Manejar errores aquí
+      }
+    );
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   return (
-    <div className="playfair-display-letras  grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#d3d3cb] before:h-full max-md:before:hidden">
+    <div className="playfair-display-letras contenderdso grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#d3d3cb] before:h-full max-md:before:hidden">
       <div>
         <h2 className="playfair-display-letras text-gray-800 text-3xl font-extrabold">
           Realiza tu consulta hoy mismo
         </h2>
         <p className="playfair-display-letras text-sm text-gray-500 mt-4 leading-relaxed">
           Rellena el siguiente formulario o contáctanos manualmente y en breve
-          nos pondremos en contacto con vos.
+          nos pondremos en contacto contigo.
         </p>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="space-y-4 mt-8">
             <input
               type="text"
-              placeholder="Full Name"
+              name="from_name"
+              placeholder="Nombre Completo"
               className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
+              value={formData.from_name}
+              onChange={handleChange}
+              required
             />
 
             <input
-              type="number"
-              placeholder="Phone No."
+              type="tel"
+              name="user_phone"
+              placeholder="Telefono No."
               className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
+              value={formData.user_phone}
+              onChange={handleChange}
+              required
             />
 
             <input
               type="email"
+              name="user_email"
               placeholder="Email"
               className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
+              value={formData.user_email}
+              onChange={handleChange}
+              required
             />
 
             <textarea
+              name="mensaje"
               placeholder="Escribe tu mensaje..."
               className="px-2 pt-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
+              value={formData.mensaje}
+              onChange={handleChange}
+              required
             ></textarea>
           </div>
 
           <button
-            type="button"
+            type="submit"
             className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white"
           >
             <svg
@@ -62,7 +118,7 @@ const Contacto = () => {
         </form>
 
         <ul className="mt-4 flex flex-wrap justify-center gap-6">
-          <li className="flex items-center text-blue-600">
+          <li className="flex items-center text-[#262626]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
@@ -75,11 +131,14 @@ const Contacto = () => {
                 data-original="#000000"
               />
             </svg>
-            <a href="javascript:void(0)" className="text-sm ml-4">
+            <a
+              href="mailto:infoktssolutions@gmail.com"
+              className="text-sm ml-4 text-[#262626]"
+            >
               <strong>infoktssolutions@gmail.com</strong>
             </a>
           </li>
-          <li className="flex items-center text-blue-600">
+          <li className="flex items-center text-[#262626]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16px"
@@ -92,7 +151,7 @@ const Contacto = () => {
                 data-original="#000000"
               ></path>
             </svg>
-            <a href="javascript:void(0)" className="text-sm ml-4">
+            <a href="tel:+541160254313" className="text-sm ml-4">
               <strong>+54 1160254313</strong>
             </a>
           </li>
@@ -103,7 +162,8 @@ const Contacto = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.7765771508248!2d-58.54481767795927!3d-34.50076042515149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb07cc3a4ff2b%3A0x6ad2dc346bdd3f56!2sAu%20Panamericana%201938!5e0!3m2!1ses-419!2sar!4v1720450355444!5m2!1ses-419!2sar"
           className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
           frameBorder="0"
-          allowfullscreen
+          allowFullScreen
+          title="ubicacion"
         ></iframe>
       </div>
     </div>

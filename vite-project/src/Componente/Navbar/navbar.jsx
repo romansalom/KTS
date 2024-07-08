@@ -7,26 +7,38 @@ export const Navbar = () => {
   const navigation = [
     {
       title: 'Nosotros',
-      path: 'javascript:void(0)',
+      path: '#nosotros',
       hoverClass: 'hover:border-red-500',
     },
     {
       title: 'Productos',
-      path: 'javascript:void(0)',
+      path: '#productos',
       hoverClass: 'hover:border-yellow-500',
     },
     {
       title: 'Contacto',
-      path: 'javascript:void(0)',
+      path: '#contacto',
       hoverClass: 'hover:border-blue-500',
     },
   ];
+
+  const handleScroll = (e, path) => {
+    e.preventDefault();
+    const targetId = path.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <nav className="playfair-display-letras bg-[#262626] w-full md:static md:text-base md:border-none">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-1 md:py-2 md:block">
-          <a href="javascript:void(0)" className="mx-auto md:mx-0">
+          <a href="#home" className="mx-auto md:mx-0">
             <img
               src="logokts.png"
               width={100}
@@ -86,6 +98,7 @@ export const Navbar = () => {
                 <a
                   href={item.path}
                   className={`block border-b-2 border-transparent ${item.hoverClass}`}
+                  onClick={(e) => handleScroll(e, item.path)}
                 >
                   {item.title}
                 </a>
