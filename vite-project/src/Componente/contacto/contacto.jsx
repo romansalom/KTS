@@ -5,7 +5,7 @@ const Contacto = () => {
   const [formData, setFormData] = useState({
     from_name: '',
     user_email: '',
-    user_phone: '',
+    user_Phone: '',
     mensaje: '',
   });
 
@@ -71,10 +71,10 @@ const Contacto = () => {
 
             <input
               type="tel"
-              name="user_phone"
+              name="user_Phone"
               placeholder="Telefono No."
               className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
-              value={formData.user_phone}
+              value={formData.user_Phone}
               onChange={handleChange}
               required
             />
