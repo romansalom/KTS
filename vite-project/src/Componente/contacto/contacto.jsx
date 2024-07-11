@@ -47,7 +47,7 @@ const Contacto = () => {
   };
 
   return (
-    <div className="contenderdso playfair-display-letras grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#d3d3cb] before:h-full max-md:before:hidden">
+    <div className="contenderdso playfair-display-letras grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-white before:h-full max-md:before:hidden">
       <div>
         <h2 className="playfair-display-letras text-gray-800 text-3xl font-extrabold">
           Realiza tu consulta hoy mismo

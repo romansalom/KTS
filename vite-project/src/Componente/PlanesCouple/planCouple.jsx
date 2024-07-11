@@ -47,7 +47,7 @@ const PlaneCouple = () => {
 
               <p className="playfair-display-letras leading-relaxed mb-4">
                 Mudate con tu pareja a un departamento con un diseño
-                miinimalista y moderno sin ocuparte de nada
+                minimalista y moderno sin ocuparte de nada
               </p>
               <div className="playfair-display-letras flex border-t border-black py-2"></div>
               <p className="playfair-display-letras leading-relaxed mb-4">
